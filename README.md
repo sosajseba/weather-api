@@ -6,6 +6,8 @@ _Además es posible consultar los paises y ciudades disponibles.
 Este proyecto consta de dos contenedores, uno para la API y otro para la base de datos. Gracias a esto no es necesario el uso de ningún script para la creación 
 de la base de datos. Esta es creada, configurada y populada automáticamente al iniciar los contenedores._
 
+_Con respecto a los tests, estos son ejecutados una vez antes de compilar la aplicación y sus resultados pueden verse en consola al iniciar los contenedores._
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Contenido</summary>
@@ -73,6 +75,7 @@ _Para ejecutar este proyecto es necesario contar con [Docker](https://docs.docke
 * [SQL Server 2019](https://www.microsoft.com/es-es/sql-server/sql-server-2019)
 * [Serilog](https://serilog.net/)
 * [Swagger](https://swagger.io/)
+* [xUnit](https://xunit.net/)
 * [Docker](https://www.docker.com/)
 
 ## Contacto
