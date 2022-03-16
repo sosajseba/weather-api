@@ -21,7 +21,7 @@ public class WeatherSeed : IEntityTypeConfiguration<Weather>
                     CityId = i,
                     RainChance = (byte)(new Random().Next(0, 100)),
                     TempC = decimal.Round(temp2, 1),
-                    TempF = decimal.Round(temp2 + 32, 1),
+                    TempF = decimal.Round(ToFarenheit(temp2), 1),
                     Wind = decimal.Round(NextDecimal(0, 20), 1),
                     Condition = GetRandomCondition(),
                     Humidity = (byte)(new Random().Next(0, 100)),
@@ -46,5 +46,9 @@ public class WeatherSeed : IEntityTypeConfiguration<Weather>
     {
         Random rand = new Random();
         return (decimal)(rand.NextDouble() * (maxValue - minValue) + minValue);
+    }
+
+    private decimal ToFarenheit(decimal celsius){
+        return (celsius * 9/5) + 32;
     }
 }
